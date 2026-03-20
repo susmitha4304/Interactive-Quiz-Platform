@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2563eb">
+<title>QuizMaster Pro</title>
+
+<link rel="stylesheet" href="style3.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">QuizMaster</div>
+  <button id="dark-toggle"><i class="fas fa-moon"></i></button>
+</nav>
+
+<main class="main">
+<div class="container">
+
+<!-- WELCOME -->
+<div id="welcome-screen">
+  <h1>Welcome to QuizMaster 🎯</h1>
+  <p>Test your knowledge in different domains</p>
+  <button id="start-btn">Start Quiz</button>
+</div>
+
+<!-- CATEGORY -->
+<div id="category-screen" class="hidden">
+  <h2>Select Category</h2>
+
+  <select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <div class="categories">
+    <button class="category-btn" data-cat="18">💻 Computer</button>
+    <button class="category-btn" data-cat="19">➗ Math</button>
+    <button class="category-btn" data-cat="17">🔬 Science</button>
+    <button class="category-btn" data-cat="9">🌍 GK</button>
+  </div>
+</div>
+
+<!-- LOADER -->
+<div id="loader" class="hidden">Loading Questions...</div>
+
+<!-- QUIZ -->
+<div id="quiz-container" class="hidden">
+  <div class="quiz-top">
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div class="timer">⏱ <span id="time">15</span></div>
+  </div>
+
+  <h2 id="question"></h2>
+  <div id="answers"></div>
+  <button id="next-btn">Next Question</button>
+</div>
+
+<!-- RESULT -->
+<div id="result-box" class="hidden">
+  <h2>Quiz Completed 🎉</h2>
+  <p id="score"></p>
+
+  <input type="text" id="username" placeholder="Enter your name">
+  <button id="save-score">Save Score</button>
+
+  <h3>Leaderboard</h3>
+  <ul id="leaderboard"></ul>
+
+  <button onclick="location.reload()">Restart Quiz</button>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">© 2026 QuizMaster</footer>
+
+<script src="script3.js"></script>
+</body>
+</html>
